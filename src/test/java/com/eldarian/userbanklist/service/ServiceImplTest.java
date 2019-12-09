@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ServiceImplTest {
-    ServiceImpl testService = new ServiceImpl();
+    private ServiceImpl testService = new ServiceImpl();
 
     @Test
     public void getUserById() {
@@ -19,9 +19,11 @@ public class ServiceImplTest {
 
     @Test
     public void getRichestUser() {
+        assertEquals("Bob Gale", testService.getRichestUser());
     }
 
     @Test
     public void getAccountsSum() {
+        assertEquals(570, testService.getAccountsSum());
     }
 }
