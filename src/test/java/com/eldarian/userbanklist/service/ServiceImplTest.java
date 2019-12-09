@@ -10,20 +10,23 @@ public class ServiceImplTest {
 
     @Test
     public void getUserById() {
-        User testUser = new User();
-        testUser.setUserId(1);
-        testUser.setName("Jack");
-        testUser.setSurname("Wolf");
-        assertEquals(testUser, testService.getUserById(1));
+        User expectedUser = new User();
+        expectedUser.setUserId(1);
+        expectedUser.setName("Jack");
+        expectedUser.setSurname("Wolf");
+        assertEquals(expectedUser, testService.getUserById(1));
     }
 
     @Test
     public void getRichestUser() {
-        assertEquals("Bob Gale", testService.getRichestUser());
+        String expectedRichestUser = "Bob Gale";
+        assertEquals(expectedRichestUser, testService.getRichestUser());
     }
 
     @Test
-    public void getAccountsSum() {
-        assertEquals(570, testService.getAccountsSum());
+    public void getAccountsSum()
+    {
+        int expectedAccountSum = 570;
+        assertEquals(expectedAccountSum, testService.getAccountsSum());
     }
 }
